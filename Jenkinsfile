@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'Docker-server')  {
-                        sh "docker build -t rakesh210/loadgenerator:latest ."
+                        sh "docker push rakesh210/loadgenerator:latest"
                     }
                 }
             }
