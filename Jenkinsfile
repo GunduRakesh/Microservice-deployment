@@ -8,8 +8,9 @@ pipeline {
                     dir('src') {
 
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'Docker-server')  {
-                        sh "docker build -t rakesh210/cartservice:latest ."
-                    }
+                        sh ''' export DOCKER_BUILDKIT=1
+                          docker build -t rakesh210/cartservice:latest .'''
+                            }
                         }
                 }
             }
