@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'Docker-server')  {
-                        sh "docker build -t rakesh210/cartservice:latest ."
+                        sh "docker push rakesh210/cartservice:latest"
                     }
                 }
             }
