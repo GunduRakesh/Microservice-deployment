@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'Docker-server')  {
-                        sh "docker build -t rakesh210/recommendationservice:latest ."
+                        sh "docker build -t rakesh210/recommendationservice:latest ." 
                     }
                 }
             }
