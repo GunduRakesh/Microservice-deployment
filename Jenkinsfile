@@ -3,7 +3,7 @@ pipeline {
 
     stages {
         stage('Build & Tag Docker Image') {
-            steps {
+            steps { 
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'Docker-server')  {
                         sh "docker build -t rakesh210/emailservice:latest ."
